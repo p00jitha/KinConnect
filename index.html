@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friend</title>
+  <style>
+    body{
+    background-image: url("https://i0.wp.com/unbelievab.ly/wp-content/uploads/2020/09/friends-photo.jpg?fit=1000%2C667&ssl=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    top: 0;
+}
+.box{
+    width: 350px;
+    display:flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+}
+     h1{
+      text-align: center;
+      color: rgb(136, 6, 6);
+      font-size:60px;
+     }
+     .f{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     }
+input{
+  height:45px;
+  width:65%;
+  border:rgb(11, 19, 19);
+  outline:none;
+  border-radius: 30px;
+  color:#0b0f12;
+  padding: 0 0 0 45px;
+  margin: 10px;
+  background:rgb(252, 241, 222);
+}
+button
+{
+  width:76%;
+  height:45px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background:rgb(252, 241, 222);
+  color: brown;
+}
+::-webkit-input-placeholder{
+  color:brown;
+}
+.fri{
+  text-align: center;
+  color: rgb(28, 98, 5);
+  font-size: 40px;
+}
+i{
+  text-align: center;
+  color:rgb(4, 110, 110);
+  font-size:20px;
+  font-weight:bold;
+}
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="box">
+      <div class="top">
+        <h1>Besties Bond</h1>
+       <div class="fri"><p id="friend"></p>
+      <i id="slogan"></i></div>
+      </div>
+        <div class="f">
+          <input  id="a" type="text" placeholder="your name" required>
+        </div>
+        <div class="f">
+          <input id="b" type="text" placeholder="bestie name" required>
+        </div>
+        <div class="f">
+         <button onclick="friend()">strong of your bond</button>
+        </div>
+    </div>
+  </div>
+  <script>
+    function friend()
+  {
+      var num1 = document.getElementById('a').value;
+     var  num2 = document.getElementById('b').value;
+    if(num1 && num2)
+    {
+      var n=Math.random();
+      n=n*100+1;
+      var f2;
+      if(n<=50)
+      {
+        f2=n+49;
+      }
+      else
+      {
+        f2=n;
+      }
+      var f=Math.floor(f2);
+      if(f>=90)
+      {
+        document.getElementById("friend").innerHTML="Your bond is "+f+"%";
+        document.getElementById("slogan").innerHTML="Your friend is someone who helps you up when you're down,and if they can't they lay down beside you and listen.";
+      }
+      else if(f>=80 && f<90)
+      {
+        document.getElementById("friend").innerHTML="Your bond is "+f+"%";
+        document.getElementById("slogan").innerHTML="Your friend is one who walks in when the rest of the world walks out.";
+      }
+      else if(f>=70 && f<80)
+      {
+        document.getElementById("friend").innerHTML="Your bond is "+f+"%";
+        document.getElementById("slogan").innerHTML="To the world you may be just one person,but to your friend you may be the world.";
+      }
+      else if(f>=60 && f<70)
+      {
+        document.getElementById("friend").innerHTML="Your bond is "+f+"%";
+        document.getElementById("slogan").innerHTML="Your friend understands your tears is much more valuable than a lot of friends who only know your smile.";
+      }
+      else
+      {
+        document.getElementById("friend").innerHTML="Your bond is "+f+"%";
+        document.getElementById("slogan").innerHTML="Your friend is one who sees you at your worst and still loves you anyway.";
+      }
+    }
+    else
+    {
+      document.getElementById("friend").innerHTML="Please enter values";
+      document.getElementById("slogan").innerHTML=" ";
+    }
+  }
+  </script>
+</body>
+</html>
